@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ribnip
 
-## Getting Started
+A modern Next.js application built with cutting-edge technologies for fast development and optimal performance.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+- **[Next.js 15](https://nextjs.org/)** - React framework with App Router
+- **[React 19](https://react.dev/)** - Latest React with enhanced features
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe development
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[Bun](https://bun.sh/)** - Ultra-fast JavaScript runtime and package manager
+- **[Biome](https://biomejs.dev/)** - Fast formatter and linter
+- **[Docker](https://www.docker.com/)** - Containerized deployment
+
+## 🛠️ Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- [Bun](https://bun.sh/) (latest version)
+- [Docker](https://www.docker.com/) (optional, for containerized development)
+
+## ⚡ Quick Start
+
+### Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd ribnip
+   ```
+
+2. **Install dependencies**
+   ```bash
+   bun install
+   ```
+
+3. **Start the development server**
+   ```bash
+   bun dev
+   ```
+
+4. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000) to see your application running.
+
+### Docker Development
+
+For a containerized development experience:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Start development server in Docker
+docker compose up
+
 ```
+Navigate to [http://localhost:3000](http://localhost:3000) to see your application running.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📋 Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Command | Description |
+|---------|-------------|
+| `bun dev` | Start development server |
+| `bun run start` | Start production server |
+| `bun run lint` | Run Biome linting |
+| `bun run format` | Format code with Biome |
+| `bun run check` | Run lint and format checks |
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🔧 Development Workflow
 
-## Learn More
+### Code Quality
 
-To learn more about Next.js, take a look at the following resources:
+This project maintains high code quality through automated tools:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Pre-commit hooks** automatically format and lint your code
+- **Biome** provides fast, unified linting and formatting
+- **TypeScript** ensures type safety
+- **Conventional commits** for consistent commit messages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Environment Variables
 
-## Deploy on Vercel
+Environment variables are managed with type safety using T3 Env:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Add your variables to `src/lib/Env.mjs`
+2. Define the schema with Zod validation
+3. Access them through the typed `env` object
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🐳 Docker Support
+
+The application supports both development and production Docker workflows:
+
+- **Development**: Hot reloading with volume mounts
+- **Production**: Multi-stage build with optimized Bun runtime
+- **Consistent environment** across all deployment targets
+
+---
+
+Built with modern tools for exceptional developer experience and performance.
